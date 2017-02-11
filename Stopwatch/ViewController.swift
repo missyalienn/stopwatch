@@ -47,8 +47,7 @@ class ViewController: UIViewController {
             let minutes = Int(stopwatch.elapsedTime / 60)
             let seconds = Int(stopwatch.elapsedTime.truncatingRemainder(dividingBy: 60))
             let tenthsOfSecond = Int((stopwatch.elapsedTime * 10).truncatingRemainder(dividingBy: 10))
-            elapsedTimeLabel.text = String(format: "%02d:%02d.%d",
-                                           minutes, seconds, tenthsOfSecond)
+            elapsedTimeLabel.text = String(format: "%02d:%02d.%d", minutes, seconds, tenthsOfSecond)
         } else {
             timer.invalidate()
         }
