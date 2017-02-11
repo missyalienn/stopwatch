@@ -24,11 +24,9 @@ class Stopwatch {
         }
     }
 
-    
     var isRunning: Bool {
         return startTime != nil
     }
-    
     
     func start() {
          startTime = NSDate()
@@ -48,6 +46,5 @@ class Stopwatch {
 //    Why is it important to make the start time a private property, and the elapsed time a read-only, computed property?
 
     
-    
-    
+
  }
