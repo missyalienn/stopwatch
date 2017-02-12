@@ -15,6 +15,7 @@ class Stopwatch {
     //
 
     private var startTime: NSDate?
+
     
     var elapsedTime: TimeInterval {
         if let startTime = self.startTime {
@@ -39,6 +40,7 @@ class Stopwatch {
     }
     
 
+    
     
 //    Discuss how, when a Stopwatch starts, it keeps track of its start time by assigning a new NSDate to its startTime property.
 //     Explain the assignment of nil to an optional property to indicate that it has "no value."

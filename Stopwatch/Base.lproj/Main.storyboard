@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,31 +22,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinetrees" translatesAutoresizingMaskIntoConstraints="NO" id="vE2-yK-if2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinetrees" translatesAutoresizingMaskIntoConstraints="NO" id="vE2-yK-if2">
+                                <rect key="frame" x="0.0" y="0.0" width="347" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-0s-Esi">
-                                <rect key="frame" x="133" y="239" width="107.5" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-0s-Esi">
+                                <rect key="frame" x="149" y="239" width="77" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="SyO-Co-Z07"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.408256065" green="0.73250407159999997" blue="0.83152173910000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM0-ka-ufM">
-                                <rect key="frame" x="80" y="334" width="64" height="145"/>
+                                <rect key="frame" x="79" y="315" width="73" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="fCF-ML-bdZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Relax">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEH-Yv-QvU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relax in Forest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-I6-HoF">
+                                <rect key="frame" x="21" y="119" width="330" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmV-ld-9bu">
-                                <rect key="frame" x="236" y="383" width="62" height="48"/>
+                                <rect key="frame" x="226" y="362" width="84" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Stop">
-                                    <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.98969186939999998" green="0.99595649819999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zoa-aQ-8M5"/>
@@ -57,15 +66,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dmV-ld-9bu" secondAttribute="bottom" constant="236" id="YVo-by-hVL"/>
-                            <constraint firstItem="zM0-ka-ufM" firstAttribute="baseline" secondItem="dmV-ld-9bu" secondAttribute="firstBaseline" id="Zm4-nY-aE7"/>
-                            <constraint firstItem="dmV-ld-9bu" firstAttribute="leading" secondItem="zM0-ka-ufM" secondAttribute="trailing" constant="92" id="ZvO-hv-0eM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zM0-ka-ufM" secondAttribute="bottom" constant="188" id="afx-e3-JYz"/>
-                            <constraint firstItem="zM0-ka-ufM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="hQo-RL-Owz"/>
-                            <constraint firstItem="F8d-0s-Esi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lUP-LT-rMk"/>
-                            <constraint firstItem="zM0-ka-ufM" firstAttribute="centerY" secondItem="dmV-ld-9bu" secondAttribute="centerY" id="qt0-Y0-iLj"/>
-                            <constraint firstItem="dmV-ld-9bu" firstAttribute="baseline" secondItem="zM0-ka-ufM" secondAttribute="firstBaseline" id="wLu-4T-0d1"/>
-                            <constraint firstItem="F8d-0s-Esi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="219" id="xhv-ge-tZt"/>
+                            <constraint firstItem="zM0-ka-ufM" firstAttribute="centerY" secondItem="dmV-ld-9bu" secondAttribute="centerY" id="2Jz-rF-STj"/>
+                            <constraint firstItem="dmV-ld-9bu" firstAttribute="leading" secondItem="zM0-ka-ufM" secondAttribute="trailing" constant="74" id="9Xc-yL-IHm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dmV-ld-9bu" secondAttribute="bottom" constant="257" id="BPh-k9-v2q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gjS-I6-HoF" secondAttribute="trailing" constant="8" id="DSV-gg-of3"/>
+                            <constraint firstItem="zM0-ka-ufM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="Dyd-WU-dP5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zM0-ka-ufM" secondAttribute="bottom" constant="209" id="H28-m4-XLy"/>
+                            <constraint firstItem="F8d-0s-Esi" firstAttribute="top" secondItem="gjS-I6-HoF" secondAttribute="bottom" constant="74" id="NDQ-ha-Oip"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F8d-0s-Esi" secondAttribute="bottom" constant="385" id="NJu-Vk-sE3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vE2-yK-if2" secondAttribute="trailing" constant="12" id="dF6-sY-wHa"/>
+                            <constraint firstItem="gjS-I6-HoF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="99" id="dzg-cF-rLZ"/>
+                            <constraint firstItem="vE2-yK-if2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="euW-0k-SdL"/>
+                            <constraint firstItem="vE2-yK-if2" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="fa3-7V-089"/>
+                            <constraint firstItem="F8d-0s-Esi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jBH-cl-cnS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dmV-ld-9bu" secondAttribute="trailing" constant="49" id="o2F-eH-SZe"/>
+                            <constraint firstItem="vE2-yK-if2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yna-jq-1h6"/>
+                            <constraint firstItem="gjS-I6-HoF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="zlb-wn-h1s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -76,8 +92,79 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--Beach View Controller-->
+        <scene sceneID="KJ2-Io-8Na">
+            <objects>
+                <viewController id="glE-Jf-OYm" customClass="BeachViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bla-3q-ZAA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ecd-Ay-TsW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zR5-s4-RLv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beachUnsplsah2x" translatesAutoresizingMaskIntoConstraints="NO" id="C92-O3-0JI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Relax on Beach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97W-xT-C4C">
+                                <rect key="frame" x="83" y="93" width="208" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51l-M0-TgG">
+                                <rect key="frame" x="113" y="234" width="148" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddp-5M-Wx5">
+                                <rect key="frame" x="41" y="351" width="138" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Relax">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="beachRelaxTapped:" destination="glE-Jf-OYm" eventType="touchUpInside" id="TeW-eg-TNl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-gn-XQo">
+                                <rect key="frame" x="187" y="360" width="142" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.98969186939999998" green="0.99595649819999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="beachStopTapped:" destination="glE-Jf-OYm" eventType="touchUpInside" id="iaR-4M-5aI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C92-O3-0JI" firstAttribute="leading" secondItem="zR5-s4-RLv" secondAttribute="leadingMargin" constant="-16" id="NiF-zI-QHs"/>
+                            <constraint firstItem="C92-O3-0JI" firstAttribute="centerY" secondItem="zR5-s4-RLv" secondAttribute="centerY" id="fjs-Fq-JxP"/>
+                            <constraint firstItem="C92-O3-0JI" firstAttribute="centerX" secondItem="zR5-s4-RLv" secondAttribute="centerX" id="ijy-uP-JLU"/>
+                            <constraint firstItem="C92-O3-0JI" firstAttribute="top" secondItem="bla-3q-ZAA" secondAttribute="bottom" constant="-20" id="m5r-Eh-X4w"/>
+                            <constraint firstItem="ecd-Ay-TsW" firstAttribute="top" secondItem="C92-O3-0JI" secondAttribute="bottom" id="o2T-db-p0U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beachElapsedTimeLabel" destination="51l-M0-TgG" id="5gy-c4-xmZ"/>
+                        <outlet property="titleLabel" destination="97W-xT-C4C" id="qZU-bl-LrR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIf-Y3-ZhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890.39999999999998" y="138.98050974512745"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="beachUnsplsah2x" width="706" height="1224"/>
         <image name="pinetrees" width="912" height="1368"/>
     </resources>
 </document>

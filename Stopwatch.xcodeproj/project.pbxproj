@@ -14,6 +14,7 @@
 		721A876A1AE4B75C003DBFC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 721A87681AE4B75C003DBFC4 /* LaunchScreen.xib */; };
 		721A87761AE4B75C003DBFC4 /* StopwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A87751AE4B75C003DBFC4 /* StopwatchTests.swift */; };
 		F64EA1461E4EE00600A44547 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64EA1451E4EE00600A44547 /* Stopwatch.swift */; };
+		F64EA1481E50B4AF00A44547 /* BeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64EA1471E50B4AF00A44547 /* BeachViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		721A87741AE4B75C003DBFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		721A87751AE4B75C003DBFC4 /* StopwatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchTests.swift; sourceTree = "<group>"; };
 		F64EA1451E4EE00600A44547 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = SOURCE_ROOT; };
+		F64EA1471E50B4AF00A44547 /* BeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeachViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				721A87611AE4B75B003DBFC4 /* ViewController.swift */,
 				F64EA1451E4EE00600A44547 /* Stopwatch.swift */,
 				721A87631AE4B75C003DBFC4 /* Main.storyboard */,
+				F64EA1471E50B4AF00A44547 /* BeachViewController.swift */,
 				721A87661AE4B75C003DBFC4 /* Images.xcassets */,
 				721A87681AE4B75C003DBFC4 /* LaunchScreen.xib */,
 				721A875D1AE4B75B003DBFC4 /* Supporting Files */,
@@ -166,6 +169,11 @@
 					721A87591AE4B75B003DBFC4 = {
 						CreatedOnToolsVersion = 6.3;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					721A876E1AE4B75C003DBFC4 = {
 						CreatedOnToolsVersion = 6.3;
@@ -220,6 +228,7 @@
 			files = (
 				721A87621AE4B75B003DBFC4 /* ViewController.swift in Sources */,
 				F64EA1461E4EE00600A44547 /* Stopwatch.swift in Sources */,
+				F64EA1481E50B4AF00A44547 /* BeachViewController.swift in Sources */,
 				721A87601AE4B75B003DBFC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,9 +364,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stopwatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.yourschool.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.yourschool.Stopwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -367,9 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stopwatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.yourschool.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.yourschool.Stopwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
